@@ -7,7 +7,7 @@ test.describe.configure({mode: 'serial'})
 test.describe('users', () => {
   let userId
 
-  test('Create a new student using Post', async ({ request, userData }) => {
+  test('Create a new user using Post', async ({ request, userData }) => {
     const response = await request.post(process.env.API_ENDPOINT, {
       // headers: {
       //   Accept: 'application/json',
@@ -25,7 +25,7 @@ test.describe('users', () => {
     console.log(responseBody)
     console.log(responseBody.FIRST_NAME)
 
-    userId = responseBody.STUDENT_ID
+    userId = responseBody.USER_ID
     console.log(userId + ' THIS IS ID')
 
 
